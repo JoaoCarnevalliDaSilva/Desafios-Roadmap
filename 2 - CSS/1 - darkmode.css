@@ -13,12 +13,45 @@ body {
   font-family: monospace;
 }
 
+input[type="radio"] {
+  display: none;
+}
+
+:root {
+  --bg-card: #ffffff;
+  --text-color: #1a1a1a;
+  --p-color: #666666;
+  --btn-bg: #2d68ff;
+  --btn-text: #ffffff;
+  --border-color: #e0e0e0;
+}
+
+#theme-dark:checked ~ .main-container {
+  --bg-card: #1c2128;
+  --text-color: #ffffff;
+  --p-color: #adbac7;
+  --btn-bg: #2d68ff;
+  --border-color: #444c56;
+}
+
+#theme-custom:checked ~ .main-container {
+  --bg-card: #f9f8ed;
+  --text-color: #1a2b1f;
+  --p-color: #5c7462;
+  --btn-bg: #328746;
+  --border-color: #d3d9ce;
+}
+
 .main-container {
   grid-column: 2/3;
   grid-row: 2/3;
-  border: 1px solid grey;
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 20px;
+  
+  background-color: var(--bg-card);
+  color: var(--text-color);
+  transition: all 0.3s ease;
 }
 
 .modos-exibicao {
@@ -28,15 +61,27 @@ body {
   justify-content: center;
 }
 
-.modos-exibicao h2{
-  margin-left: 4px;
+.modos-exibicao label {
+  padding: 15px 40px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
 }
 
-.modos-exibicao a{
-  padding: 40px;
-  border-radius: 4px;
-  border: 1px solid grey  ;
-  text-decoration: none;
+.modos-exibicao label:first-child {
+  border-radius: 8px 0 0 8px;
+}
+.modos-exibicao label:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+#theme-light:checked ~ .main-container label[for="theme-light"],
+#theme-dark:checked ~ .main-container label[for="theme-dark"],
+#theme-custom:checked ~ .main-container label[for="theme-custom"] {
+  background-color: var(--btn-bg);
+  color: white;
+  border-color: var(--btn-bg);
 }
 
 .mensagem {
@@ -50,18 +95,19 @@ body {
 }
 
 .mensagem p {
-  font-weight: bolder;
+  font-weight: normal;
   font-size: 18px;
   margin-bottom: 60px;
+  color: var(--p-color);
 }
 
-.mensagem button{
-  padding: 12px;
-  border-radius: 4px;
-  color: white;
-  background-color: rgb(38, 38, 119);
-}
-
-.mensagem button:hover{
+.mensagem button {
+  padding: 15px 25px;
+  border-radius: 8px;
+  border: none;
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
 }
