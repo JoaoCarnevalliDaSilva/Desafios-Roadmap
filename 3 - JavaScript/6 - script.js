@@ -7,7 +7,7 @@ function calcular(event) {
   let totalGorjeta = (valor*gorjeta)/100;
   let totalPagar = valor + totalGorjeta;
   let totalPorPessoa = totalPagar / pessoas;
-  resultado.innerHTML = 'A conta ficou R$ ${totalPorPessoa} para cada pessoa.'; 
+  resultado.innerHTML = `A conta ficou R$ ${totalPorPessoa.toFixed(2)} para cada pessoa.`; 
   document.querySelector("#total").value = '';
   document.querySelector("#gorjeta").value = '';
   document.querySelector("#pessoas").value = '';
