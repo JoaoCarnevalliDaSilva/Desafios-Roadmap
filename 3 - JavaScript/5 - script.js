@@ -6,7 +6,7 @@ function calcular(event) {
   let resultado = document.querySelector("#resultado");
   let rendimento = (valor*taxa*periodo)/100;
   let valorFinal = valor + rendimento;
-  resultado.innerHTML = "Ao final de "+periodo+" meses, você terá R$"+valorFinal;
+  resultado.innerHTML = 'Ao final de ${periodo} meses, você terá ${valorFinal}';
   document.querySelector("#inicial").value = '';
   document.querySelector("#taxa").value = '';
   document.querySelector("#periodo").value = '';
