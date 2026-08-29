@@ -7,9 +7,11 @@
 </head>
 <body>
   
-  <form action="" onsubmit="calcular">
-    <label for="">Orçamento Diario:</label><br>
+  <form action="" onsubmit="calcular(event)">
+    <label for="">Orçamento Total:</label><br>
     <input type="text" id="orcamento" placeholder="Ex: 1000"><br><br>
+    <label for="">Quantos dias de viagem?</label><br>
+    <input type="text" id="dias" placeholder="Ex: 10"><br><br>
     <label for="">Alimentação</label><br>
     <input type="text" id="alimentacao" placeholder="Quantia para alimentação"><br><br>
     <label for="">Transporte</label><br>
@@ -17,7 +19,7 @@
     <input type="submit" value="Calcular">
   </form>
 
-  <div class="resultado"></div>
+  <div id="resultado"></div>
 
   <script src="./8 - script.js"></script>    
 
