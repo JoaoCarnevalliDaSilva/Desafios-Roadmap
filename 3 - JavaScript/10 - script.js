@@ -5,7 +5,7 @@ function calcular(event) {
   const passagem = parseFloat(document.querySelector("#passagem").value);
   const resultado = document.querySelector("#resultado");
   if (idade >= 60 || railcard === "sim") {
-    resultado.innerHTML = `Desconto aplicado! Sua passagem de R$ ${passagem.toFixed(2)} caiu para R$ ${passagem*0.7.toFixed(2)}`;
+    resultado.innerHTML = `Desconto aplicado! Sua passagem de R$ ${passagem.toFixed(2)} caiu para R$ ${(passagem*0.7).toFixed(2)}`;
     resultado.style.color = 'green';
   } else {
     resultado.innerHTML = `Sem desconto aplicável. O valor da passagem é de R$ ${passagem.toFixed(2)}`;

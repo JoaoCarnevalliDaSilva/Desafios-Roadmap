@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form action="" onsubmit="calcular(event)">
+    <label for="">Selecione o seu cargo:</label><br>
+    <select id="cargo">
+      <option value="">------------</option>
+      <option value="Gerente">Gerente</option>
+      <option value="Analista">Analista</option>
+      <option value="Estagiario">Estagiario</option>
+    </select><br><br>
+    <label for="">Grau de urgência:</label><br>
+    <select id="urgencia">
+      <option value="">------------</option>
+      <option value="Normal">Normal</option>
+      <option value="Urgente">Urgente</option>
+    </select><br><br>
+    <input type="submit" value="Solicitar Aprovação">
+  </form>
+
+  <div id="resultado"></div>
+
+  <script src="./11 - script.js"></script>
+  
+</body>
+</html>
